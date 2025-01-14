@@ -56,7 +56,7 @@ class GraphGeneratorMixin:
         for j, (points, teams) in enumerate(brackets.items()):
             pairings[points] = []
             graph = nx.Graph()
-            n_teams = len(teams)
+            n_teams = max([t.subrank for t in teams if t.subrank is not None])  # len(teams)
             for t1 in teams:
                 for t2 in teams:
                     penalty = self.assignment_cost(t1, t2, n_teams, j)
