@@ -75,13 +75,10 @@ CACHES = {
         "LOCATION": ALT_REDIS_URL,
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
-            # "IGNORE_EXCEPTIONS": True, # Supresses ConnectionError at max
+            "IGNORE_EXCEPTIONS": True, # Supresses ConnectionError at max
             "SOCKET_CONNECT_TIMEOUT": 5,
             "SOCKET_TIMEOUT": 60,
-            "CONNECTION_POOL_KWARGS": {
-                "ssl_cert_reqs": None,
-                #"max_connections": 5,
-            },
+            "ssl_cert_reqs": None,
         },
     },
 }
