@@ -7,6 +7,8 @@ Change Log
 
 *Release date: TBD*
 
+- Emails can now be sent through the HTTP API of any email provider supported by `django-anymail <https://anymail.dev/>`_, by setting the ``EMAIL_PROVIDER`` config var, with delivery tracking through django-anymail's webhooks. Existing SMTP and SendGrid configurations continue to work unchanged.
+
 
 2.12.1
 ------
