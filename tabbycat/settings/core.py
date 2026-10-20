@@ -166,6 +166,7 @@ INSTALLED_APPS = (
     'drf_spectacular',
     'django_better_admin_arrayfield',
     'push_notifications',
+    'anymail',
 )
 
 ROOT_URLCONF = 'urls'
